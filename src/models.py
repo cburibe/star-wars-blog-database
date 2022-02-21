@@ -54,6 +54,9 @@ class Starship(Base):
     consumables = Column(String(250), nullable=False)
     crew = Column(String(250), nullable=False)
 
+    def to_dict(self):
+        return {}
+
 
 ## Draw from SQLAlchemy base
 render_er(Base, 'diagram.png')
